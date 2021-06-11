@@ -1,6 +1,6 @@
 <?php
 namespace app\index\controller;
-
+use think\Db;
 class Index
 {
     public function index()
@@ -16,5 +16,19 @@ class Index
     public  function  login()
     {
         echo __METHOD__;
+        //链接数据库
+        $u =Db::table('p_users')->where('user_id',123)->find();
+        echo "<pre>";print_r($u); echo "</pre>";
+    }
+    //用户注册
+    public  function  reg()
+    {
+        echo "用户注册";
+    }
+    //商品列表
+    public  function  goodsList()
+    {
+        $list =Db::table('p_goods')->field('goods_id,goods_name,shop_price')->limit(5)->select();
+        echo "<pre>";print_r($list); echo "</pre>";
     }
 }
