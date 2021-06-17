@@ -54,13 +54,57 @@ Route::get('sui','Student/sui');
 //用户注册
 Route::get('reg1','User/reg1');
 Route::post('reg1','User/reg2');
-//商品表
-Route::get('good/:id','goods/goods');
-//Route::post('good2','Goods/good2');
+//个人中心
+Route::get('center','User/center');
+//登录
+Route::get('login1','User/login1');
+//登录逻辑
+Route::post('loginDO','User/loginDO');
+//商品详情
+Route::get('goods/:id', 'goods/detail');         //商品详情
+Route::get('goodslist','User/goodsList');
+//退出登录
+Route::get('sha', 'User/sha');
 
 
 
+//月考
+Route::get('yk11', 'Yk/yk1');
+Route::post('yk22', 'Yk/yk22');
 
+//列表展示
+Route::get('daile', 'Yk/daile');
+//闪出
+Route::get('del/:id', 'Yk/del');
+
+
+//6、15
+//登录
+Route::get('deng', 'Movie/deng');
+//登录逻辑
+Route::post('deng2', 'Movie/deng2');
+//列表
+Route::post('mov', 'Movie/mov');
+Route::post('mov2', 'Movie/mov2');
+//电影评分
+Route::post('vote', 'Movie/vote');
+
+
+//抽奖练习
+Route::get('prize', 'Prize/prize');
+
+//定座
+Route::get('ding', 'Ding/ding');      //登录
+Route::post('ding1', 'Ding/ding1');   //登录逻辑
+Route::post('ding3', 'Ding/ding3');      //个人中心
+Route::get('tui', 'Ding/tui');        //退出登录
+Route::get('ding4','Ding/ding4');    // 预定座位
+Route::post('ding5','Ding/ding5');     //预定作为逻辑
+Route::post('qu','Ding/qu');     //取消预定
+Route::post('ding6','Ding/ding6');     //我的订单
+
+//数据统计
+Route::get('info', 'Info/info');
 
 
 

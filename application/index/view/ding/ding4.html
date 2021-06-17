@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        width: 900px;
+        height: 600px;
+        border: 1px solid black;
+    }
+    ul span{
+        width: 180px;
+        height: 117px;
+        display: inline-block;
+        background: cadetblue;
+        text-align: center;
+        list-style: none;
+        margin: 12px;
+        float: left;
+    }
+    .name{
+        background: crimson;
+    }
+</style>
+<body>
+<h2>订座</h2>
+<div>
+    <ul>
+        {foreach $seat as $k=>$v}
+        {if($v.state=='已')}
+        <span class="name">{$k+1}</span>
+        {else}
+        <span>{$k+1}</span>
+        {/if}
+        {/foreach}
+    </ul>
+</div>
+    <form action="ding5" method="post">
+        请选择座位号：<input type="text" name="wei"> | <input type="submit" value="预定">
+    </form>
+<br>
+    <form action="qu" method="post">
+        取消预订：<input type="text" name="wei"> | <input type="submit" value="取消预定">
+    </form>
+</body>
+</html>

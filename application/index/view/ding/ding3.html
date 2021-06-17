@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>个人中心</h2>
+<hr>
+|<a href="/tui">退出登录</a>  ||<a href="ding6">我的订单</a> ||<a href="ding4">订座</a>
+<hr>
+用户名:  {$name}<br>
+用户邮箱:   {$email}<br>
+登录时间：
+<ul>
+    {foreach $history as $k=>$v }
+    <li> {$v.id}  -  {$v.login_time} - {$v.login_ip}</li>
+    {/foreach}
+</ul>
+</body>
+</html>
