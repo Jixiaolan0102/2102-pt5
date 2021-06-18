@@ -52,6 +52,7 @@ Route::get('sui','Student/sui');
 
 
 //用户注册
+Route::get('test1','/test1');
 Route::get('reg1','User/reg1');
 Route::post('reg1','User/reg2');
 //个人中心
@@ -64,18 +65,18 @@ Route::post('loginDO','User/loginDO');
 Route::get('goods/:id', 'goods/detail');         //商品详情
 Route::get('goodslist','User/goodsList');
 //退出登录
-Route::get('sha', 'User/sha');
+//Route::get('sha', 'User/sha');
 
 
 
 //月考
-Route::get('yk11', 'Yk/yk1');
-Route::post('yk22', 'Yk/yk22');
+Route::get('yk1', 'Yk/yk1');    //登录页面
+Route::post('yk2', 'Yk/yk2');   //登录逻辑
+Route::post('yk3', 'Yk/yk3');   //列表
+Route::get('/sha/:id', 'Yk/sha');   //删除
+Route::get('/gai/:id', 'Yk/gai');   //修改
+Route::post('gai2', 'Yk/gai2');   //修改逻辑
 
-//列表展示
-Route::get('daile', 'Yk/daile');
-//闪出
-Route::get('del/:id', 'Yk/del');
 
 
 //6、15
@@ -104,7 +105,8 @@ Route::post('qu','Ding/qu');     //取消预定
 Route::post('ding6','Ding/ding6');     //我的订单
 
 //数据统计
-Route::get('info', 'Info/info');
+Route::get('info', 'Info/info');   //消费最多的前10个用户
+Route::get('info2', 'Info/info2');   //订单的前10个用户信息
 
 
 

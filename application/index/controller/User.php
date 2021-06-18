@@ -3,8 +3,11 @@ namespace app\index\controller;
 use think\Controller;
 use think\Db;
 use think\facade\Session;
+//引入User模型
+use app\index\model\User as UserModel;
 class User extends Controller
 {
+
     //用户注册
     public function reg1()
     {

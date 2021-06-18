@@ -2,17 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>列表</title>
+    <title>Title</title>
 </head>
 <body>
-<h2>列表</h2>
-<hr>
 <table border="1">
     <tr>
         <td>图书ID</td>
         <td>名称</td>
         <td>价格</td>
-        <td>数据</td>
+        <td>数量</td>
         <td>是否上架</td>
         <td>操作</td>
     </tr>
@@ -28,13 +26,13 @@
             {else}
             否
             {/if}
+
         </td>
         <td>
-            <a href="/del/{$v.book_id}">删除</a>||
-            <a href="#">修改</a>
+            <a href="/sha/{$v.book_id}">删除</a>||
+            <a href="/gai/{$v.book_id}">修改</a>
+
         </td>
-
-
     </tr>
     {/foreach}
 </table>
